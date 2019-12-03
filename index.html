@@ -1,22 +1,55 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
+    <title>Eastlick Enterprises, LLC - Sign Rental Management</title>
+</head>
+
+<body>
+    <div id="header"></div>
+    <div id="navbar"></div>
+    Content here
+    <div id="footer"></div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  </body>
+
+    <script>
+        $(function () {
+            $.ajax({
+                url: 'header.html',
+                context: document.body,
+                success: function (data) {
+                    $('#header').html(data);
+                }
+            });
+            $.ajax({
+                url: 'navbar.html',
+                context: document.body,
+                success: function (data) {
+                    $('#navbar').html(data);
+                }
+            });
+            $.ajax({
+                url: 'footer.html',
+                context: document.body,
+                success: function (data) {
+                    $('#footer').html(data);
+                }
+            });
+        });
+    </script>
+</body>
+
 </html>
