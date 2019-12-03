@@ -7,12 +7,13 @@ In order to avoid coding header/navbar/footer on every page, thus having to chan
 <div id="header"></div>
 ```
 ```javascript
-        $(function () {
-            $.ajax({
-                url: 'header.html',
-                context: document.body,
-                success: function (data) {
-                    $('#header').html(data);
-                }
-            });
+$(function () {
+    $.ajax({
+        url: 'header.html',
+        context: document.body,
+        success: function (data) {
+            $('#header').html(data);
+        }
+    });
+});
 ```
