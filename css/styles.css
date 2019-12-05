@@ -14,7 +14,8 @@
 .row-content {
     padding: 5px 0;
     border-bottom: 1px ridge blue;
-    #min-height: 200px; }
+    /*  min-height: 200px; */
+} 
 
 nav {
     background-color: #e3f2fd;
