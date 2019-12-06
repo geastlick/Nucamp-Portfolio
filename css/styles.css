@@ -12,11 +12,14 @@
  } 
 
 .row-content {
-    padding: 5px 0;
+    padding: 10px 0;
     border-bottom: 1px ridge blue;
     /*  min-height: 200px; */
 } 
 
 nav {
     background-color: #e3f2fd;
+}
+#carouselSigns .carousel-indicators {
+    bottom: 10px;
 }
