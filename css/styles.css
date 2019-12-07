@@ -1,7 +1,9 @@
 .site-footer {
     background-color: #e3f2fd;
     padding: 2px 0; }
-  
+div#content {
+    padding-bottom: 30px;
+}  
 .jumbotron.header {
     margin: 0;
     padding: 30px;

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="favicon.png" type="image/png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Eastlick Enterprises, LLC - Sign Rental Management</title>
+</head>
+
+<body>
+    <div id="header"></div>
+    <div id="navbar"></div>
+    <div id="content" class="container">
+        <div class="row row-content border-bottom-0">
+            <div class="col-12">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" class="form-control" id="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" class="form-control" id="phone">
+                    </div>
+                    <div class="form-group">
+                        <label class="pr-3">Preferred Contact</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="preferredContact"
+                                id="preferredContactEmail" value="email" checked>
+                            <label class="form-check-label" for="preferredContactEmail">
+                                Email
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="preferredContact"
+                                id="preferredContactPhone" value="phone">
+                            <label class="form-check-label" for="preferredContactPhone">
+                                Phone
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactReason">Contact Reason</label>
+                        <select class="form-control" id="contactReason">
+                            <option>More Information</option>
+                            <option>Demo</option>
+                            <option>Feedback</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="comments">Comments</label>
+                        <textarea class="form-control" id="comments" rows="5"></textarea>
+                    </div>
+                    <buttom type="submit" class="btn btn-primary">Submit</buttom>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/site.js"></script>
+
+    <script>
+        $(function () {
+            loadContent("contact");
+        });
+    </script>
+</body>
+
+</html>

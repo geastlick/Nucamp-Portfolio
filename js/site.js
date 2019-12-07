@@ -13,7 +13,7 @@ function loadContent(page) {
             $('#navbar').html(data);
 
             if (page === "home") $("#home_li").addClass("active");
-            else if (page === "info") $("#info_li").addClass("active");
+            else if (page === "contact") $("#contact_li").addClass("active");
             else if (page === "about") $("#about_li").addClass("active");
         }
     });
