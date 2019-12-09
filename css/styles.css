@@ -22,18 +22,3 @@ div#content {
 nav {
     background-color: #e3f2fd;
 }
-#carouselSigns .carousel-item {
-    position: relative;
-    height: 100%;
-}
-#carouselSigns .carousel-item:not(:first-child) img {
-    /* 
-        :first-child must be excluded or carousel will be displayed under heading
-        Implication is that first carousel image should be the tallest
-
-        Better solution is to simply resize/crop all images to same pixel height/width
-    */
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
