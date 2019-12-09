@@ -17,38 +17,26 @@ In order to avoid coding header/navbar/footer on every page, thus having to chan
 >     });
 > });
 
-Carousel with differently sized images:  The preferred solution is to make sure all images are consistently sized.  The problem with inconsistently sized images is that the lower content moves with each image load.  This was partially addressed via JavaScript (setting the height to that of the tallest image).  But to make it look better, a dark-grey background was added along with centering the images.
+Carousel with differently sized images:  **The only solution is to make sure all images are consistently sized**.  This was partially addressed via JavaScript (setting the height to that of the tallest image).  But to make it look better, a dark-grey background was added along with centering the images.  The issue encountered is that BS does some DOM magic and conflicts with this code.  It works on initial load, but upon resizing the window, all images go to 0 height.
 
 - Add bg-secondary to all carousel-item class.
 
 - Add the following in the document.ready function:
 > ``` javascript
+>const items = $('#carouselSigns .carousel-item');
+>
 >function carouselNormalization() {
->    let items = $('#carouselSigns .carousel-item'); //grab all slides
->    let tallest; //create variable to make note of the tallest slide
->
->    if (items.length) {
->        function normalizeHeights() {
->            tallest = null;
->            items.each(function () { //add heights to array
->                tallest = Math.max(tallest, $(this).height()); //calculate largest value
->            });
->            items.each(function () {
->                $(this).css('min-height', tallest + 'px');
->            });
->        };
->        normalizeHeights();
->
->        $(window).on('resize orientationchange', function () {
->            items.each(function () {
->                $(this).css('min-height', '0'); //reset min-height
->            });
->            normalizeHeights(); //run it again 
->        });
->    }
+>    // reset the height
+>    items.css('min-height', 0);
+>    // set the height
+>    let maxHeight = Math.max.apply(null,
+>        items.map(function () {
+>            return $(this).outerHeight();
+>        }).get());
+>    items.css('min-height', maxHeight + 'px');
 >}
 >
->carouselNormalization();
+>$(window).on('load resize orientationchange', carouselNormalization);
 
 - Add the following styles:
 >``` CSS
