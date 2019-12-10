@@ -15,9 +15,11 @@ div#content {
 
 .row-content {
     padding: 10px 0;
-    border-bottom: 1px ridge blue;
     /*  min-height: 200px; */
 } 
+.row-content:not(:last-child) {
+    border-bottom: 1px ridge blue;
+}
 
 nav {
     background-color: #e3f2fd;
