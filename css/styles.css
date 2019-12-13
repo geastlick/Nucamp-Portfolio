@@ -24,3 +24,6 @@ div#content {
 nav {
     background-color: #e3f2fd;
 }
+div#content.homeHighlights .media-body {
+   font-size: large; 
+}
